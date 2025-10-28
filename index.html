@@ -12,6 +12,7 @@
     <div class="container">
       <div class="logo">Business Landing Page</div>
       <nav class="nav">
+        <a href="#about">About</a>
         <a href="#features">Features</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
@@ -34,6 +35,18 @@
         <div class="hero-image">
           <img src="Hero Image.jpg" alt="Hero Image" />
         </div>
+      </div>
+    </section>
+
+    <section id="about" class="about section">
+      <div class="container">
+        <h2>About Us</h2>
+        <p style="font-family: 'Nunito', sans-serif; font-size: 1.1rem; line-height: 1.8;">
+          Welcome to Business Landing Page — your go-to platform for creating professional and impactful online presences. 
+          Our mission is to empower businesses and individuals to showcase their brand with clean design, responsive performance, 
+          and elegant simplicity. We believe in combining creativity with functionality, ensuring every website feels intuitive and inspiring. 
+          Whether you're a startup, entrepreneur, or growing company, we’re here to help you stand out in the digital world.
+        </p>
       </div>
     </section>
 
@@ -119,7 +132,35 @@
 
   <footer class="footer">
     <div class="container">
-      <p>© 2025. All rights reserved.</p>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>Business Landing Page</h3>
+          <p>Creating clean, modern, and responsive designs for your online presence.</p>
+        </div>
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="https://in.linkedin.com/" target="_blank" aria-label="LinkedIn">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" />
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" />
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" />
+            </a>
+            <a href="https://x.com/" target="_blank" aria-label="Twitter">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="Twitter" />
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Business Landing Page. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 <script>
@@ -129,6 +170,85 @@
     toggleBtn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
   });
 </script>
+
+</script>
+
+<style>
+  .footer {
+    background-color: #111;
+    color: #fff;
+    padding: 50px 0 20px;
+    text-align: center;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    gap: 30px;
+  }
+
+  .footer-logo {
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+  }
+
+  .footer-logo h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .footer-social {
+    flex: 1;
+    min-width: 250px;
+    text-align: right;
+  }
+
+  .footer-social h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+  }
+
+  .social-icons a img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    filter: invert(1);
+  }
+
+  .social-icons a:hover img {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .social-icons {
+      justify-content: center;
+    }
+  }
+</style>
 
 </body>
 </html>
