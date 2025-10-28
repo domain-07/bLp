@@ -190,40 +190,50 @@ header .container {
 }
 
 .gallery .grid-gallery {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* exactly 4 columns */
-  gap: 15px;
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
   margin-top: 20px;
 }
 
+.gallery .scroll-track {
+  display: flex;
+  animation: scrollLeft 40s linear infinite;
+  gap: 30px;
+  animation-play-state: running;
+}
+
+.gallery .scroll-track:hover {
+  animation-play-state: paused;
+}
+
+/* .thumb:hover ~ .scroll-track {
+  animation-play-state: paused;
+} */
+
 .thumb {
-  width: 100%;
-  height: 200px; /* fixed height */
+  flex: 0 0 auto;
+  width: 250px;
+  height: 200px;
   overflow: hidden;
   border-radius: var(--radius);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.4s ease, box-shadow 0.4s ease; /* smooth hover effect */
 }
 
 .thumb img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* ensures the image covers the box without distortion */
-  display: block;
+  object-fit: cover;
   border-radius: var(--radius);
-  transition: transform 0.4s ease, filter 0.4s ease;
-}
-
-.thumb:hover {
-  transform: scale(1.05); /* zoom effect */
-  box-shadow: 0 15px 30px rgba(0,0,0,0.2); /* shadow for depth */
 }
 
 .thumb:hover img {
-  transform: scale(1.1); /* subtle zoom on image itself */
-  filter: brightness(1.1) contrast(1.05); /* brighten image slightly */
+  transform: scale(1.05);
+  transition: transform 0.4s ease;
+}
+
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 
