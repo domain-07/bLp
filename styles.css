@@ -483,4 +483,21 @@ body.dark .social-links a img {
 
 body.dark .social-links a:hover img {
   filter: invert(54%) sepia(87%) saturate(500%) hue-rotate(180deg);
+/* About section styles */
+.about {
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--muted);
 }
