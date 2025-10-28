@@ -4,7 +4,7 @@
   --muted: #64748b;
   --accent: #3b82f6;
   --radius: 10px;
-  --maxw: 1100px;
+  --max: 1100px;
   --ff: 'Inter', system-ui, sans-serif;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -16,7 +16,7 @@ body {
 }
 .container {
   width: 100%;
-  max-width: var(--maxw);
+  max-width: var(--max);
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -424,15 +424,6 @@ header.site-header:hover ~ footer {
   color: black;
 }
 
-.about p {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 18px;
-  line-height: 1.8;
-  color: var(--muted);
-}
-
-/* Enhanced Footer with Social Media Icons */
 .about p {
   max-width: 800px;
   margin: 0 auto;
