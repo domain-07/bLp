@@ -433,6 +433,15 @@ header.site-header:hover ~ footer {
 }
 
 /* Enhanced Footer with Social Media Icons */
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+/* Enhanced Footer with Social Media Icons */
 .footer {
   background-color: #111;
   color: #fff;
