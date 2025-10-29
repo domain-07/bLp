@@ -431,7 +431,7 @@ header.site-header:hover ~ footer {
 .about h2 {
   font-size: 32px;
   margin-bottom: 20px;
-  color: black;
+  color: var(--text);
 }
 
 .about p {
