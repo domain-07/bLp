@@ -289,6 +289,219 @@ header .container {
   transform: scale(1.05);
 }
 
+/* =========================
+   CONTACT SECTION (Modern UI)
+========================= */
+
+.contact {
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  padding: 100px 20px;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.contact .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 50px;
+}
+
+.contact-left,
+.contact-right {
+  flex: 1;
+  min-width: 320px;
+  border-radius: 16px;
+  padding: 40px;
+  background: #ffffffcc;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-left:hover,
+.contact-right:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.contact-left h2,
+.contact-right h2 {
+  font-size: 2.2rem;
+  color: var(--text);
+  margin-bottom: 15px;
+}
+
+.contact-left p {
+  font-size: 1.05rem;
+  color: var(--muted);
+  margin-bottom: 10px;
+  line-height: 1.7;
+}
+
+.contact-left a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-left a:hover {
+  color: #1d4ed8;
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+.contact-info p {
+  margin: 6px 0;
+  font-size: 1rem;
+}
+
+.contact-social {
+  margin-top: 20px;
+}
+
+.contact-social a {
+  display: inline-block;
+  margin-right: 15px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.contact-social a:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+.contact-social img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Contact Form Styling */
+.contact-right form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-right input,
+.contact-right textarea {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #ffffffdd;
+  font-size: 1rem;
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+.contact-right input:focus,
+.contact-right textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+  background: #fff;
+  outline: none;
+}
+
+.contact-right button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(59, 130, 246, 0.3);
+}
+
+.contact-right button:hover {
+  background: #2563eb;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+}
+
+/* Decorative background effects */
+.contact::before,
+.contact::after {
+  content: '';
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle at center, rgba(59, 130, 246, 0.2), transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.contact::before {
+  top: 10%;
+  left: 5%;
+}
+
+.contact::after {
+  bottom: 10%;
+  right: 5%;
+}
+
+.contact * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact .container {
+    flex-direction: column;
+  }
+}
+
+/* DARK MODE */
+body.dark .contact {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+body.dark .contact-left,
+body.dark .contact-right {
+  background: rgba(30, 41, 59, 0.8);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+body.dark .contact-left h2,
+body.dark .contact-right h2 {
+  color: #fff;
+}
+
+body.dark .contact-left p,
+body.dark .contact-right p {
+  color: #cbd5e1;
+}
+
+body.dark .contact-right input,
+body.dark .contact-right textarea {
+  background: #0f172a;
+  color: #f8fafc;
+  border: 1px solid #334155;
+}
+
+body.dark .contact-right input:focus,
+body.dark .contact-right textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.3);
+}
+
+body.dark .contact-right button {
+  background: #3b82f6;
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+
+body.dark .contact-right button:hover {
+  background: #2563eb;
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.45);
+}
+
 .footer {
   background: white;
   text-align: center;
